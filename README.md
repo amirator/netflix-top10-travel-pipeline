@@ -90,10 +90,8 @@ flowchart LR
 | Stage | Module | What it does | Rows in → out (this run) |
 |---|---|---|---|
 | 1 Extract | `extract.py` | Download the 2 Netflix files and the Wikidata snapshot; write the manifest | 2 files |
-| Clean | `clean.py` | global: freeze study window 2021-07-04..2026-11-22 | 11,280 → 11,280 |
-| Clean | `clean.py` | global: raw -> staging | 11,280 → 11,280 |
-| Clean | `clean.py` | countries: freeze study window 2021-07-04..2026-11-22 | 525,220 → 525,220 |
-| Clean | `clean.py` | countries: raw -> staging | 525,220 → 525,220 |
+| Clean | `clean.py` | global: freeze study window 2021-07-04..2026-11-22 (checks run on these rows) | raw → 11,280 |
+| Clean | `clean.py` | countries: freeze study window 2021-07-04..2026-11-22 (checks run on these rows) | raw → 525,220 |
 | Transform | `transform.py` | global non-English rows -> title-week fact | 11,280 → 5,640 |
 | Transform | `transform.py` | country rows -> non-English title-country-week fact | 525,220 → 150,707 |
 | Transform | `transform.py` | titles -> analysis cohort | 2,011 → 1,893 |

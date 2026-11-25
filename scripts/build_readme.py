@@ -26,8 +26,17 @@ def render() -> str:
     lang_rows = "\n".join(f"| {n} | {v['titles']} | {v['travellers']} | {pct(v['travel_rate'])} |" for n, v in lang)
     module = {"clean": "clean.py", "transform": "transform.py", "analyze": "analyze.py", "load": "load.py"}
     stage_rows = "| 1 Extract | `extract.py` | Download the 2 Netflix files and the Wikidata snapshot; write the manifest | 2 files |\n"
-    stage_rows += "\n".join(f"| {s['stage'].title()} | `{module[s['stage']]}` | {s['step']} | {s['rows_in']:,} → {s['rows_out']:,} |"
-                            for s in q["stages"])
+    # raw-file row counts grow every week Netflix publishes, so the README shows the frozen study window
+    # (rows_out of the window cut) rather than the raw input size, keeping the README stable between runs
+    lines = []
+    for s in q["stages"]:
+        if "raw -> staging" in s["step"]:
+            continue
+        if "freeze study window" in s["step"]:
+            lines.append(f"| Clean | `clean.py` | {s['step']} (checks run on these rows) | raw → {s['rows_out']:,} |")
+        else:
+            lines.append(f"| {s['stage'].title()} | `{module[s['stage']]}` | {s['step']} | {s['rows_in']:,} → {s['rows_out']:,} |")
+    stage_rows += "\n".join(lines)
     status = [c["status"] for c in q["checks"]]
     v = {
         **{key: val for key, val in k.items() if not isinstance(val, dict)},

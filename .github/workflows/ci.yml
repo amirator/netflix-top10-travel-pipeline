@@ -27,7 +27,7 @@ jobs:
         run: python -m pytest -q
       - name: Upload warehouse + quality log
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: warehouse
           path: |
