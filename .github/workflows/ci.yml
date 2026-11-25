@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    name: Pipeline (extract -> load) + tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.13", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: "Run pipeline: download Netflix Top 10 files, clean, transform, analyze, load to DuckDB + Parquet"
+        run: python run_pipeline.py
+      - name: Extract manifest (URL, time, SHA-256)
+        run: cat data/raw/manifest.json
+      - name: pytest (reconciliation to raw files, warehouse, app smoke test, README drift)
+        run: python -m pytest -q
+      - name: Upload warehouse + quality log
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: warehouse
+          path: |
+            data/warehouse/parquet/
+            data/quality_log.json
+            kpis.json
+          if-no-files-found: warn

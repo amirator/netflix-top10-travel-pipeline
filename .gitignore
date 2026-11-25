@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Netflix files are downloaded on every run (Tudum terms of use) - never committed
+data/raw/
+data/staging/
+data/warehouse/
+data/quality_log.json
+*.part
+*.tmp

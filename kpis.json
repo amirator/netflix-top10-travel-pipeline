@@ -1,0 +1,124 @@
+{
+  "as_of_week": "2026-11-22",
+  "first_week": "2021-07-04",
+  "weeks_in_study": 282,
+  "countries_per_week": 93,
+  "travel_min_countries": 47,
+  "travel_min_global_weeks": 4,
+  "non_english_titles_all": 2011,
+  "cohort_titles": 1893,
+  "cohort_films": 1106,
+  "cohort_tv": 787,
+  "travellers": 270,
+  "travel_rate": 0.143,
+  "travel_rate_tv": 0.192,
+  "travel_rate_film": 0.108,
+  "travellers_tv": 151,
+  "travellers_film": 119,
+  "debut_40plus_titles": 345,
+  "debut_40plus_travel_rate": 0.583,
+  "debut_under10_titles": 764,
+  "debut_under10_travel_rate": 0.007,
+  "debut_20_39_travel_rate": 0.166,
+  "debut_10_19_travel_rate": 0.04,
+  "travellers_from_40plus_debut_share": 0.744,
+  "late_bloomers": 26,
+  "median_debut_countries_travellers": 56.5,
+  "median_debut_countries_others": 10.0,
+  "median_countries_travellers": 77.0,
+  "median_countries_others": 14.0,
+  "median_global_weeks_travellers": 5.0,
+  "median_global_weeks_others": 2.0,
+  "travellers_peak_by_week2_share": 0.904,
+  "others_peak_by_week2_share": 0.945,
+  "median_weeks_to_peak_travellers": 1.0,
+  "language_matched_share": 0.54,
+  "language_matched_titles": 1023,
+  "unmatched_travel_rate": 0.07,
+  "top_language_by_travellers": "Korean",
+  "top_language_by_travellers_n": 57,
+  "language_rates": {
+    "German": {
+      "titles": 37,
+      "travellers": 16,
+      "travel_rate": 0.432
+    },
+    "Norwegian": {
+      "titles": 21,
+      "travellers": 9,
+      "travel_rate": 0.429
+    },
+    "French": {
+      "titles": 58,
+      "travellers": 20,
+      "travel_rate": 0.345
+    },
+    "Swedish": {
+      "titles": 24,
+      "travellers": 7,
+      "travel_rate": 0.292
+    },
+    "Korean": {
+      "titles": 199,
+      "travellers": 57,
+      "travel_rate": 0.286
+    },
+    "Spanish": {
+      "titles": 191,
+      "travellers": 47,
+      "travel_rate": 0.246
+    },
+    "Turkish": {
+      "titles": 30,
+      "travellers": 7,
+      "travel_rate": 0.233
+    },
+    "Portuguese": {
+      "titles": 34,
+      "travellers": 7,
+      "travel_rate": 0.206
+    },
+    "Multiple": {
+      "titles": 46,
+      "travellers": 9,
+      "travel_rate": 0.196
+    },
+    "Italian": {
+      "titles": 38,
+      "travellers": 6,
+      "travel_rate": 0.158
+    },
+    "Japanese": {
+      "titles": 76,
+      "travellers": 11,
+      "travel_rate": 0.145
+    },
+    "Polish": {
+      "titles": 23,
+      "travellers": 2,
+      "travel_rate": 0.087
+    },
+    "Other (smaller languages)": {
+      "titles": 121,
+      "travellers": 9,
+      "travel_rate": 0.074
+    },
+    "Hindi": {
+      "titles": 98,
+      "travellers": 2,
+      "travel_rate": 0.02
+    },
+    "Telugu": {
+      "titles": 27,
+      "travellers": 0,
+      "travel_rate": 0.0
+    }
+  },
+  "top_traveller": {
+    "title": "Squid Game: Season 1",
+    "countries_reached": 94,
+    "country_weeks": 1764,
+    "global_weeks": 32
+  },
+  "title_country_weeks_total": 150707
+}
