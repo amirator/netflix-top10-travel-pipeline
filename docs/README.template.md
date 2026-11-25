@@ -1,9 +1,10 @@
 # Which non-English Netflix titles travel?
 
 **A five-stage Python data pipeline (extract → clean → transform → analyze → load) on Netflix's official Top 10 data, ending in a Streamlit dashboard.**
+**Live dashboard:** [netflix-top10-travel.streamlit.app](https://netflix-top10-travel.streamlit.app/)  
 Status: **initial prototype** · Author: [Mohammad Amir Khan](https://github.com/amirator)
 
-![CI](https://github.com/amirator/netflix-top10-travel-pipeline/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/amirator/netflix-top10-travel-pipeline/actions/workflows/ci.yml/badge.svg?branch=main)
 
 | | |
 |---|---|

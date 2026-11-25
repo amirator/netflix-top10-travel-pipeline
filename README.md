@@ -4,7 +4,7 @@
 **Live dashboard:** [netflix-top10-travel.streamlit.app](https://netflix-top10-travel.streamlit.app/)  
 Status: **initial prototype** · Author: [Mohammad Amir Khan](https://github.com/amirator)
 
-![CI](https://github.com/amirator/netflix-top10-travel-pipeline/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/amirator/netflix-top10-travel-pipeline/actions/workflows/ci.yml/badge.svg?branch=main)
 
 | | |
 |---|---|
